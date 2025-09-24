@@ -1,38 +1,89 @@
-.App {
+/* ベース */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans JP", sans-serif;
+  color: #222;
+}
+.title {
   text-align: center;
+  font-size: 28px;
+  margin: 12px 0 6px;
+}
+.subinfo {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #444;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* モード切替 */
+.modeBar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 12px;
+  margin-bottom: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+.modeBtn {
+  font-size: 18px;
+  padding: 6px 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  background: #fff;
 }
+.modeBtn:disabled { background: #e9eefc; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* 問題＆例の単語 */
+.questionWrap { text-align: center; margin-bottom: 12px; }
+.questionTitle { font-size: 56px; margin: 0; font-weight: 700; }
+.examples { margin-top: 8px; color: #555; white-space: normal; }
+.examples--under { display: block; }
+.exampleWord { margin-right: 10px; font-size: 28px; }
+
+/* 選択肢 */
+.choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 12px 0 20px;
+}
+.choice {
+  padding: 18px 20px;
+  border-radius: 14px;
+  border: 1px solid #cfcfcf;
+  font-size: 28px;
+  font-weight: 700;
+  background: #fff;
+  color: #111;
+}
+.choice.picked.correct { background: #1e90ff; color: #fff; }
+.choice.picked.wrong   { background: #e53935; color: #fff; }
+
+/* 下部操作 */
+.bottomBar { display: flex; justify-content: center; gap: 16px; align-items: center; }
+.btn {
+  font-size: 18px; padding: 10px 16px; border-radius: 10px;
+  border: 1px solid #cfcfcf; background: #fff; font-weight: 600;
+}
+.btn-primary { background: #1e90ff; color: #fff; }
+.nextBtn:disabled { background: #f3f3f3; color: #111; opacity: 0.7; cursor: not-allowed; }
+
+/* 母音ハイライト */
+.vowel { color: #d93025; font-weight: 700; }
+
+/* 集計表 */
+.table { width: 100%; border-collapse: collapse; font-size: 16px; line-height: 1.5; }
+.table th, .table td { border-bottom: 1px solid #eee; padding: 8px 10px; }
+.table th { background: #fafafa; text-align: left; }
+.tc { text-align: center; }
+
+/* ===== スマホ最適化 ===== */
+@media (max-width: 480px) {
+  .title { font-size: 22px; }
+  .questionTitle { font-size: 32px; line-height: 1.2; word-break: break-word; }
+  .exampleWord { font-size: 18px; }
+  .choices { grid-template-columns: 1fr; gap: 10px; }
+  .choice { width: 100%; font-size: 22px; padding: 14px 16px; }
+  .modeBtn { font-size: 16px; padding: 6px 10px; }
 }
