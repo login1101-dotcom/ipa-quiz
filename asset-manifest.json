@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ipa-quiz/static/css/main.4a35c23a.css",
+    "main.js": "/ipa-quiz/static/js/main.33322a76.js",
+    "static/js/453.cbfb6346.chunk.js": "/ipa-quiz/static/js/453.cbfb6346.chunk.js",
+    "index.html": "/ipa-quiz/index.html",
+    "main.4a35c23a.css.map": "/ipa-quiz/static/css/main.4a35c23a.css.map",
+    "main.33322a76.js.map": "/ipa-quiz/static/js/main.33322a76.js.map",
+    "453.cbfb6346.chunk.js.map": "/ipa-quiz/static/js/453.cbfb6346.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a35c23a.css",
+    "static/js/main.33322a76.js"
+  ]
+}
